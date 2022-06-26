@@ -5,8 +5,6 @@ dotenv.config({
   path: "config/.env",
 });
 const bodyParser = require("body-parser");
-const { initDb } = require("./config/dbConfig");
-const extraSetup = require("./config/extraSetup");
 const authRoutes = require("./routes/authRoutes");
 const postRoutes = require("./routes/postRoutes");
 const userRoutes = require("./routes/userRoutes");
@@ -17,11 +15,6 @@ const app = express();
 app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.json());
-
-// Appel de la fonction pour la liaison a sequelize
-initDb();
-// Appel de la fonction pour définir les associations entre les models
-extraSetup();
 
 // route pour placer les images dans le dossier images
 app.use("/images", express.static(path.join(__dirname, "images")));
