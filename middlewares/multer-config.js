@@ -5,6 +5,7 @@ const mineTypes = {
   "image/jpeg": "jpeg",
   "image/png": "png",
   "image/pdf": "pdf",
+  "image/xlsx": "xlsx",
 };
 // Multer config
 const storage = multer.diskStorage({
