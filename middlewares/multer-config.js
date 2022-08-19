@@ -4,7 +4,7 @@ const mineTypes = {
   "image/jpg": "jpg",
   "image/jpeg": "jpeg",
   "image/png": "png",
-  "image/pdf": "pdf",
+  "application/pdf": "pdf",
   "image/xlsx": "xlsx",
 };
 // Multer config
