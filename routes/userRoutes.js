@@ -21,6 +21,7 @@ router.post("/", auth, multer, upload);
 router.put("/:id", auth, multer, updateOneUser);
 // Route pour la suppression d'un utilisateur
 router.delete("/:id", auth, deleteOneUser);*/
-router.post("/", auth, multer, upload);
+//router.post("/", auth, multer);
+router.put("/:id", auth, multer, upload);
 router.get("/:id", auth, getOneUser);
 module.exports = router;

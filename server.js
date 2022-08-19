@@ -3,7 +3,7 @@ const cors = require("cors");
 const dotenv = require("dotenv");
 
 dotenv.config({
-  path: "dBconfig/.env",
+  path: "config/.env",
 });
 require("./models/dbConfig");
 const bodyParser = require("body-parser");
