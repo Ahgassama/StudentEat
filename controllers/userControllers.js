@@ -10,20 +10,20 @@ exports.getOneUser = (req, res) => {
     .then((user) => res.status(200).json(user))
     .catch((error) => res.status(400).json({ error }));
 };
-exports.deleteOneUser = (req, res) => {
+
+exports.deleteOneUser = (req, res, next) => {
   User.findOne({ _id: req.params.id })
     .then((user) => {
-      if (!user) {
-        return res.status(404).send("Utilisateur inexistant");
+      if (req.file) {
+        const filename = user.imageUrl.split("/images/")[1];
+        fs.unlink(`images/${filename}`, () => {
+          User.deleteOne({ _id: req.params.id })
+            .then(() => res.status(200).json({ message: "Objet supprimé !" }))
+            .catch((error) => res.status(400).json({ error }));
+        });
       }
-      const filename = user.imageUrl.split("/images/")[1];
       User.deleteOne({ _id: req.params.id })
-        .then(() => {
-          fs.unlink(`images/${filename}`),
-            () => {
-              res.status(200).json({ message: "Utilisateur supprimé" });
-            };
-        })
+        .then(() => res.status(200).json({ message: "Objet supprimé !" }))
         .catch((error) => res.status(400).json({ error }));
     })
     .catch((error) => res.status(500).json({ error }));
