@@ -23,7 +23,7 @@ exports.deleteOneUser = (req, res, next) => {
         });
       }
       User.deleteOne({ _id: req.params.id })
-        .then(() => res.status(200).json({ message: "Objet supprimé !" }))
+        .then(() => res.status(200).json({ message: "Utilisateur supprimé !" }))
         .catch((error) => res.status(400).json({ error }));
     })
     .catch((error) => res.status(500).json({ error }));
