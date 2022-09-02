@@ -17,19 +17,21 @@ const Log = () => {
   };
   return (
     <div>
-      <div class="log-container">
-        <div class="connection-form">
-          <ul>
-            <li onClick={handleModals} id="register">
-              Inscription
-            </li>
-            <li onClick={handleModals} id="login">
-              Connexion
-            </li>
-          </ul>
-          {signUpModal && <SignUpForm />}
-          {loginModal && <LoginForm />}
-        </div>
+      <div className="logo">
+        <img src="./images/logo.jpg" alt="img-logo" />
+      </div>
+
+      <div class="connection-form">
+        <ul>
+          <li onClick={handleModals} id="register">
+            Inscription
+          </li>
+          <li onClick={handleModals} id="login">
+            Connexion
+          </li>
+        </ul>
+        {signUpModal && <SignUpForm />}
+        {loginModal && <LoginForm />}
       </div>
     </div>
   );
