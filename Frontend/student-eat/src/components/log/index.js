@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import SignUpForm from "./SignupForm";
 import LoginForm from "./LoginForm";
+import "./Log.scss";
+
 const Log = () => {
   const [signUpModal, setSignupModal] = useState(true);
   const [loginModal, setloginModal] = useState(false);

@@ -1,5 +1,7 @@
-import logo from './logo.svg';
-import './App.css';
+/*import logo from "./logo.svg";
+import "./App.css";
+import React from "react";
+//import Routes from "./components/Routes";
 
 function App() {
   return (
@@ -21,5 +23,17 @@ function App() {
     </div>
   );
 }
+
+export default App;*/
+import React from "react";
+import Routes from "./components/Routes";
+
+const App = () => {
+  return (
+    <div>
+      <Routes />
+    </div>
+  );
+};
 
 export default App;
