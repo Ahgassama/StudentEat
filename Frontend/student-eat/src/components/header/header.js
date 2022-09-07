@@ -31,12 +31,7 @@ const Header = () => {
       <div className="logo">
         <img src="./images/logo.jpg" alt="img-logo" />
       </div>
-      ;
-      <div className="logo-home">
-        <NavLink exact="true" to="/profil">
-          <img src="./images/user.svg" alt="profile" />
-        </NavLink>
-      </div>
+      ;<div className="logo-home"></div>
     </header>
   );
 };
