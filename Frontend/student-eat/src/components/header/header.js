@@ -27,11 +27,11 @@ const Header = () => {
   }, []);
   return (
     <header className="header-home">
-      <div className="welcomePage">Bonjour {data.surname} ! </div>
       <div className="logo">
         <img src="./images/logo.jpg" alt="img-logo" />
       </div>
-      ;<div className="logo-home"></div>
+      <div className="welcomePage">Bonjour {data.surname} ! </div>;
+      <div className="logo-home"></div>
     </header>
   );
 };
