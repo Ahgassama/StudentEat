@@ -16,7 +16,7 @@ const Header = () => {
     const fetchData = async () => {
       const result = await axios.get(
         `http://localhost:3000/api/users/${
-          JSON.parse(localStorage.getItem("Users")).userid
+          JSON.parse(localStorage.getItem("Users")).userId
         }`,
         config
       );
