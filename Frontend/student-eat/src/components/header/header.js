@@ -30,7 +30,7 @@ const Header = () => {
       <div className="logo">
         <img src="./images/logo.jpg" alt="img-logo" />
       </div>
-      <div className="welcomePage">Bonjour {data.surname}!</div>
+      <div className="welcomePage">Bonjour {data.surname}!,</div>
     </header>
   );
 };
