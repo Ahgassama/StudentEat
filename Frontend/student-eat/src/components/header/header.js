@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import Logout from "../Log/Logout";
 import { NavLink } from "react-router-dom";
 import "./header.scss";
 //Header de la page d'accueil
@@ -29,6 +30,7 @@ const Header = () => {
     <header className="header-home">
       <div className="logo">
         <img src="./images/logo.jpg" alt="img-logo" />
+        <Logout />
       </div>
       <div className="welcomePage">Bonjour {data.surname}!,</div>
     </header>
