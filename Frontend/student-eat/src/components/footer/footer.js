@@ -2,10 +2,25 @@ import React from "react";
 import "./footer.scss";
 const Footer = () => {
   return (
-    <footer className="footer-home">
-      <div className="logo">
-        <img src="./images/logo.jpg" alt="img-logo" />
-      </div>
+    <footer>
+      <h1>StudentEat</h1>
+      <nav>
+        <ul>
+          <li>
+            <a href="#">
+              <i class="fas fa-utensils"></i> Proposer un restaurant
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fas fa-hands-helping"></i> Devenir partenaire
+            </a>
+          </li>
+          <li>
+            <a href="#">Mentions légales</a>
+          </li>
+        </ul>
+      </nav>
     </footer>
   );
 };
