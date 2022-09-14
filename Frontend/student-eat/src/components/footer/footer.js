@@ -7,17 +7,18 @@ const Footer = () => {
       <nav>
         <ul>
           <li>
-            <a href="#">
-              <i class="fas fa-utensils"></i> Proposer un restaurant
+            <a href="https://www.facebook.com/studenteat.lille/">
+              <img src="./images/fbk.png" alt="img-logo" /> Facebook
             </a>
           </li>
           <li>
-            <a href="#">
-              <i class="fas fa-hands-helping"></i> Devenir partenaire
+            <a href="https://instagram.com/studenteat.lille?igshid=YmMyMTA2M2Y=">
+              <img src="./images/insta.png" alt="img-logo" />
+              Instagram
             </a>
           </li>
           <li>
-            <a href="#">Mentions légales</a>
+            <p> Mentions légales</p>
           </li>
         </ul>
       </nav>

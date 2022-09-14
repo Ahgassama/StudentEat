@@ -1,4 +1,4 @@
-.footer-home {
+/*.footer-home {
   font-size: 30px;
   height: 90px;
   display: flex;
@@ -28,4 +28,34 @@
   height: 55%;
   width: 50px;
   cursor: pointer;
+}
+*/
+footer {
+  padding: 10px 20px;
+  background-color: #353535;
+  color: white;
+  text-align: justify;
+
+  h1 {
+    font-size: 17px;
+    font-weight: normal;
+    margin: 8px;
+  }
+}
+
+ul {
+  padding: 10px 0px;
+}
+
+li {
+  list-style: none;
+  margin: 8px;
+}
+
+.fa-utensils {
+  margin-right: 8px;
+  font-size: 13px;
+}
+.fa-hands-helping {
+  margin-right: 5px;
 }
