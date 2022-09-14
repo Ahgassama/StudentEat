@@ -7,12 +7,18 @@ const Footer = () => {
       <nav>
         <ul>
           <li>
-            <a href="https://www.facebook.com/studenteat.lille/">
+            <a
+              className="logo"
+              href="https://www.facebook.com/studenteat.lille/"
+            >
               <img src="./images/fbk.png" alt="img-logo" /> Facebook
             </a>
           </li>
           <li>
-            <a href="https://instagram.com/studenteat.lille?igshid=YmMyMTA2M2Y=">
+            <a
+              className="logo"
+              href="https://instagram.com/studenteat.lille?igshid=YmMyMTA2M2Y="
+            >
               <img src="./images/insta.png" alt="img-logo" />
               Instagram
             </a>

@@ -52,10 +52,15 @@ li {
   margin: 8px;
 }
 
-.fa-utensils {
-  margin-right: 8px;
-  font-size: 13px;
-}
-.fa-hands-helping {
-  margin-right: 5px;
+.logo {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 10px;
+  img {
+    height: 150px;
+    width: 150px;
+    cursor: pointer;
+    margin-top: 30px;
+  }
 }
