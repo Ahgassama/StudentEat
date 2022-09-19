@@ -14,6 +14,7 @@ const NewDoc = () => {
       headers: {
         Authorization: `bearer ${user.token}`,
         "Content-Type": "multipart/form-data",
+        "Content-Disposition": {},
       },
     };
     const data = new FormData();
