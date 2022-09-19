@@ -31,6 +31,9 @@ const Header = () => {
       <div className="logo">
         <img src="./images/logo.jpg" alt="img-logo" />
         <Logout />
+        <NavLink exact="true" to="/profil">
+          <img src="./images/user.svg" alt="profile" />
+        </NavLink>
       </div>
       <div className="welcomePage">Bonjour {data.surname}!,</div>
     </header>

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import DeleteProfile from "./DeleteProfile";
-import UpdatePassword from "./UpdatePassword";
+import NewDoc from "./uploadForm";
 import "./Edit.scss";
 //Affichage du profil de l'utilisateur
 function DisplayProfile() {
@@ -10,7 +10,7 @@ function DisplayProfile() {
     setUpdate(!updateModal);
   }
   const handleModals = (e) => {
-    if (e.target.id === "password") {
+    if (e.target.id === "document") {
       setUpdate(true);
     }
   };
@@ -66,12 +66,12 @@ function DisplayProfile() {
           <input
             type="button"
             name="password"
-            id="password"
-            value="Modifier mon mot de passe"
+            id="document"
+            value="Insérer mon justificatif"
             onClick={handleModals && toggle}
           />
         </form>
-        {updateModal && <UpdatePassword />}
+        {updateModal && <NewDoc />}
       </div>
     </div>
   );

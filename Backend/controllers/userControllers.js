@@ -33,7 +33,7 @@ exports.upload = (req, res) => {
   User.findOne({ _id: req.params.id })
     .then((user) => {
       if (!user) {
-        return res.status(404).send("sauce non trouvée");
+        return res.status(404).send("utilisateur non trouvée");
       }
       const oldImg = user.imageUrl;
       let userToUpdate;

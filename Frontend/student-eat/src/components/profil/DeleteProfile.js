@@ -7,7 +7,7 @@ const DeleteProfile = () => {
       return;
 
     const user = JSON.parse(localStorage.getItem("Users"));
-    const id = JSON.parse(localStorage.getItem("Users")).userid;
+    const id = JSON.parse(localStorage.getItem("Users")).userId;
     console.log(id);
     const config = {
       headers: {
