@@ -2,7 +2,10 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import DeleteProfile from "./DeleteProfile";
 import NewDoc from "./uploadForm";
+
 import "./Edit.scss";
+import GetFile from "./downloadFile";
+
 //Affichage du profil de l'utilisateur
 function DisplayProfile() {
   const [updateModal, setUpdate] = useState(false);
@@ -72,6 +75,7 @@ function DisplayProfile() {
           />
         </form>
         {updateModal && <NewDoc />}
+        <GetFile />
       </div>
     </div>
   );

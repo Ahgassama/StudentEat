@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+
 import axios from "axios";
 
 const NewDoc = () => {
@@ -14,7 +15,6 @@ const NewDoc = () => {
       headers: {
         Authorization: `bearer ${user.token}`,
         "Content-Type": "multipart/form-data",
-        "Content-Disposition": {},
       },
     };
     const data = new FormData();
@@ -54,4 +54,5 @@ const NewDoc = () => {
     </form>
   );
 };
+
 export default NewDoc;
