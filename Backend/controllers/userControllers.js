@@ -66,3 +66,15 @@ exports.upload = (req, res) => {
     })
     .catch((error) => res.status(400).json({ error }));
 };
+exports.download = (req, res) => {
+  const fileName = req.file.filename;
+  const directoryPath = __basedir + "/images/";
+
+  res.download(directoryPath + fileName, fileName, (err) => {
+    if (err) {
+      res.status(500).send({
+        message: "Could not download the file. " + err,
+      });
+    }
+  });
+};

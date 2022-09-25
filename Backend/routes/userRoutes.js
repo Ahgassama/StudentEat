@@ -5,6 +5,7 @@ const {
   getOneUser,
   getAllUsers,
   deleteOneUser,
+  download,
 } = require("../controllers/userControllers");
 const authParams = require("../middlewares/authParams");
 
@@ -25,4 +26,5 @@ router.get("/:id", auth, getOneUser);
 router.get("/", auth, getAllUsers);
 // Route pour la suppression d'un utilisateur
 router.delete("/:id", auth, deleteOneUser);
+router.get("/:id", auth, download);
 module.exports = router;
