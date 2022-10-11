@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import DeleteProfile from "./DeleteProfile";
 import NewDoc from "./uploadForm";
+import Picker from "../Picker";
 
 import "./Edit.scss";
 import GetFile from "./downloadFile";
@@ -75,7 +76,7 @@ function DisplayProfile() {
           />
         </form>
         {updateModal && <NewDoc />}
-        <GetFile />
+        <Picker />
       </div>
     </div>
   );

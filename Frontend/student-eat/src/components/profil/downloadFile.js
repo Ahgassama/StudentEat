@@ -5,10 +5,12 @@ import fileDownload from "js-file-download";
 const GetFile = () => {
   const user = JSON.parse(localStorage.getItem("Users"));
   const id = JSON.parse(localStorage.getItem("Users")).userId;
+
   const config = {
     headers: {
       Authorization: `bearer ${user.token}`,
       "Content-Type": "multipart/form-data",
+      "Content-Disposition": "attachment",
       responseType: "blob",
     },
   };
@@ -19,9 +21,9 @@ const GetFile = () => {
     });
   };
   return (
-    <div>
+    <a href>
       <button onClick={handleClick}>Download the File</button>
-    </div>
+    </a>
   );
 };
 export default GetFile;

@@ -26,5 +26,5 @@ router.get("/:id", auth, getOneUser);
 router.get("/", auth, getAllUsers);
 // Route pour la suppression d'un utilisateur
 router.delete("/:id", auth, deleteOneUser);
-router.get("/:id", auth, download);
+router.get("/:id", auth, multer, download);
 module.exports = router;

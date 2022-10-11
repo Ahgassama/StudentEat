@@ -66,9 +66,9 @@ exports.upload = (req, res) => {
     })
     .catch((error) => res.status(400).json({ error }));
 };
-exports.download = (req, res) => {
+/*exports.download = (req, res) => {
   const fileName = req.file.filename;
-  const directoryPath = __basedir + "/images/";
+  const directoryPath = __dirname + "/images/";
 
   res.download(directoryPath + fileName, fileName, (err) => {
     if (err) {
@@ -77,4 +77,24 @@ exports.download = (req, res) => {
       });
     }
   });
+};
+*/
+exports.download = (req, res) => {
+  const directoryPath = __dirname + "/images/";
+  User.findOne({ _id: req.params.id })
+    .then((user) => {
+      if (!user) {
+        return res.status(404).send("utilisateur non trouvée");
+      }
+      const img = user.imageUrl;
+
+      if (req.file) {
+        fs.createReadStream(directoryPath`/${img}`, () => {
+          res.status(200).json({ message: "download image  !" });
+        });
+      } else {
+        res.status(200).json({ message: "Update user!" });
+      }
+    })
+    .catch((error) => res.status(400).json({ error }));
 };

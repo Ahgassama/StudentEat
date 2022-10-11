@@ -26,8 +26,8 @@ app.use("/api/auth", authRoutes);
 app.use("/api/users", userRoutes);
 
 //route pour télécharger image
-app.get("/api/:id", (req, res) => {
-  res.download("/images", express.static(path.join(__dirname, "images")));
+app.get("/api/users/:id", (req, res) => {
+  res.download("/images", express.static(path.download(__basedir, "images")));
 });
 app.listen(3000);
 //
