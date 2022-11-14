@@ -9,10 +9,11 @@
     margin: 0;
     font-size: 0, 5rem;
     border-radius: 20px;
+    border-color: purple;
 
-    &:focus {
+    /*&:focus {
       box-shadow: 0 0 3px rgba(51, 51, 51, 0.2);
-    }
+    }*/
   }
 }
 .log-container {
