@@ -28,7 +28,7 @@ const Header = () => {
   }, []);
   return (
     <header className="header-home">
-      <div className="logo">
+      <div className="logo-header">
         <img src="./images/logo.jpg" alt="img-logo" />
         <Logout />
         <NavLink exact="true" to="/profil">
