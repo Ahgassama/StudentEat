@@ -42,8 +42,7 @@ img {
 }
 .connection-form {
   //width: 50%;
-  margin: 0 auto;
-  border-radius: 20px;
+  border-color: red;
   text-align: center;
 
   ul {
@@ -51,10 +50,12 @@ img {
     margin: 10;
     display: flex;
     justify-content: center;
+    padding: 10px 0px;
     li {
       cursor: pointer;
       border-bottom: 3px solid #f2f2f2;
-      padding-bottom: 1px;
+      padding-bottom: 2px;
+      margin: 10px;
 
       &:hover {
         border-bottom-color: purple;
