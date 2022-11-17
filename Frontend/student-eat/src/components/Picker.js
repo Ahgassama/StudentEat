@@ -1,9 +1,10 @@
 import React from "react";
 import Calendar from "react-calendar";
+import "./Picker.scss";
 
 const Picker = () => {
   return (
-    <div>
+    <div className="calendar-style">
       <Calendar />
     </div>
   );
