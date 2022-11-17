@@ -76,8 +76,8 @@ function DisplayProfile() {
           />
         </form>
         {updateModal && <NewDoc />}
-        <Picker />
       </div>
+      <Picker />
     </div>
   );
 }

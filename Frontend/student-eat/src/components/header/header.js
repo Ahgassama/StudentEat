@@ -29,11 +29,12 @@ const Header = () => {
   return (
     <header className="header-home">
       <div className="logo-header">
-        <img src="./images/logo.jpg" alt="img-logo" />
         <Logout />
+
         <NavLink exact="true" to="/profil">
           <img src="./images/user.svg" alt="profile" />
         </NavLink>
+        <img src="./images/logo.jpg" alt="img-logo" />
       </div>
       <div className="welcomePage">Bonjour {data.surname}!,</div>
     </header>
